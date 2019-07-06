@@ -15,6 +15,7 @@ public static void main(String[] args) {
 	driver.findElement(By.xpath("//input[@id='exp-5']")).click();
 	driver.findElement(By.xpath("//input[@id='datepicker']")).sendKeys("1st July 2019");
 	driver.findElement(By.xpath("//input[@id='profession-1']")).click();
+	
 	driver.close();
 }
 }
