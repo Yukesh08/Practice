@@ -1,10 +1,12 @@
 package org.project;
 
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Sleeper;
 
 public class Executable extends BaseClass{
 	public static void main(String[] args) {
@@ -49,8 +51,13 @@ public class Executable extends BaseClass{
 		Y.selectByVisibleText("2022");
 		type(p.getCvv(), "662");
 		click(p.getBtnbook());
-		
-		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		click(p.getBtniternary());
+		click(p.getItchkbox());
+		click(p.getCansel());
+Alert a = driver.switchTo().alert();
+a.accept();
+click(p.getLogout());
 		
 	}
 

@@ -42,18 +42,37 @@ public class Pom extends BaseClass{
 	@FindBy(id = "cc_cvv")
 	private WebElement cvv;
 	
+	public WebElement getCansel() {
+		return Cansel;
+	}
 	@FindBy(xpath = "//input[@name='book_now']")
 	private WebElement btnbook;
 	
-	@FindBy(xpath = "//input[@name='my_itinerary']")
+	@FindBy(name ="my_itinerary")
 	private WebElement btniternary;
 	
+	@FindBy(xpath = "//input[@value='Cancel Selected']")
+	private WebElement Cansel;
+	
+	public WebElement getItchkbox() {
+		return itchkbox;
+	}
 	@FindBy(xpath = "//input[@name='ids[]']")
 	private WebElement checkbox;
 	
 	@FindBy(xpath = "//input[@value='Cancel Selected']")
 	private WebElement cancel;
 	
+	@FindBy(xpath = "//input[@value='304176']")
+	private WebElement itchkbox;
+	
+	@FindBy(xpath = "//input[@value='Logout']")
+	private WebElement logout;
+	
+	public WebElement getLogout() {
+		return logout;
+	}
+
 	public WebElement getCancel() {
 		return cancel;
 	}
